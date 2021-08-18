@@ -19,7 +19,7 @@ import { TabGroupDynamicExample } from './app/tab-group-dynamic-example';
     DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule.forRoot([])
   ],
   entryComponents: [TabGroupDynamicExample],
   declarations: [TabGroupDynamicExample],
