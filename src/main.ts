@@ -1,13 +1,14 @@
-import {HttpClientModule} from '@angular/common/http';
-import {NgModule} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatNativeDateModule} from '@angular/material/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DemoMaterialModule} from './app/material-module';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
+import { DemoMaterialModule } from './app/material-module';
 
-import {TabGroupDynamicExample} from './app/tab-group-dynamic-example';
+import { TabGroupDynamicExample } from './app/tab-group-dynamic-example';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import {TabGroupDynamicExample} from './app/tab-group-dynamic-example';
     DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    RouterModule
   ],
   entryComponents: [TabGroupDynamicExample],
   declarations: [TabGroupDynamicExample],
@@ -25,9 +27,9 @@ import {TabGroupDynamicExample} from './app/tab-group-dynamic-example';
 })
 export class AppModule {}
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
   .catch(err => console.error(err));
-
 
 /**  Copyright 2021 Google LLC. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
